@@ -12,7 +12,7 @@
 --------------------------------------------------------------------------
 希望大家共同进步！
 ###### 本人WX ：
-![image](https://github.com/wangshubing1/Pictures/blob/master/king/king.jpg)
+![image](https://github.com/wangshubing1/Pictures/blob/master/king/king_wx.jpg)
 -------------------------------------------------------------------------
 ###### 本人邮箱：
 wang_shubing@126.com

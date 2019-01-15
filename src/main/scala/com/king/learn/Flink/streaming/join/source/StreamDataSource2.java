@@ -4,7 +4,7 @@ import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.streaming.api.functions.source.RichParallelSourceFunction;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
-import static com.king.learn.Flink.streaming.join.JoinUtil.test;
+import static com.king.learn.Flink.streaming.join.util.JoinUtil.test;
 
 /**
  * @Author: king

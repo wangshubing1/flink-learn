@@ -1,16 +1,18 @@
-package com.king.learn.Flink.streaming.join
+package com.king.learn.Flink.streaming.join.source
 
 import java.io.Serializable
 import java.util.Random
-import WindowJoin.{Grade, Salary}
-import org.apache.flink.streaming.api.scala._
-import scala.collection.JavaConverters._
 
+import com.king.learn.Flink.streaming.join.WindowJoin.{Grade, Salary}
+import com.king.learn.Flink.streaming.join.util.ThrottledIterator
+import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
+import scala.collection.JavaConverters._
+import org.apache.flink.streaming.api.scala._
 
 /**
   * @Author: king
   * @Date: 2019-01-14
-  * @Desc: TODO 
+  * @Desc: TODO
   */
 
 object WindowJoinSampleData {

@@ -1,7 +1,5 @@
-package com.king.learn.Flink.streaming.join;
+package com.king.learn.Flink.streaming.join.util;
 
-import com.king.learn.Flink.streaming.join.source.StreamDataSource;
-import com.king.learn.Flink.streaming.join.source.StreamDataSource1;
 import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
@@ -26,7 +24,7 @@ public class JoinUtil {
         env.setParallelism(1);
         return env;
     }
-    static DataStream<Tuple3<String, String, Long>>
+    public static DataStream<Tuple3<String, String, Long>>
     getDataStream(DataStream<Tuple3<String, String, Long>> rightSource) {
         long delay = 5100L;
         // 设置水位线

@@ -1,5 +1,6 @@
 package com.king.learn.Flink.streaming.join
 
+import com.king.learn.Flink.streaming.join.source.WindowJoinSampleData
 import org.apache.flink.api.java.utils.ParameterTool
 import org.apache.flink.streaming.api.TimeCharacteristic
 import org.apache.flink.streaming.api.scala._

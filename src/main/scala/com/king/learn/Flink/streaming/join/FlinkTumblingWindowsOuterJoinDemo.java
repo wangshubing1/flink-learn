@@ -3,9 +3,9 @@ package com.king.learn.Flink.streaming.join;
 
 import com.king.learn.Flink.streaming.join.bean.Element;
 
-import com.king.learn.Flink.streaming.join.source.StreamDataSource;
 import com.king.learn.Flink.streaming.join.source.StreamDataSource1;
 import com.king.learn.Flink.streaming.join.source.StreamDataSource2;
+import com.king.learn.Flink.streaming.join.util.JoinUtil;
 import org.apache.flink.api.common.functions.CoGroupFunction;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.api.java.tuple.Tuple3;
@@ -18,7 +18,7 @@ import org.apache.flink.util.Collector;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import static com.king.learn.Flink.streaming.join.JoinUtil.getEnv;
+import static com.king.learn.Flink.streaming.join.util.JoinUtil.getEnv;
 
 
 /**

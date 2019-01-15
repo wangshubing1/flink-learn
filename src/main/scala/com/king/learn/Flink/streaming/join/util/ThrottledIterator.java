@@ -1,4 +1,4 @@
-package com.king.learn.Flink.streaming.join;
+package com.king.learn.Flink.streaming.join.util;
 
 import java.io.Serializable;
 import java.util.Iterator;

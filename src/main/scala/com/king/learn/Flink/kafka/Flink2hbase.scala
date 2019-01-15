@@ -1,4 +1,4 @@
-package com.learn.Flink.kafka
+package com.king.learn.Flink.kafka
 
 import java.text.SimpleDateFormat
 import java.util.{Date, Properties}
@@ -14,15 +14,14 @@ import org.apache.flink.api.scala._
 
 /**
   * @Author: king
-  * @Datetime: 2018/11/23
-  * @Desc: TODO
-  *
+  * @Date: 2019-01-14
+  * @Desc: TODO Inner Join
   */
 object Flink2hbase {
-  val ZOOKEEPER_URL = "hostname1:port,hostname2:port,hostname3:port"
-  val KAFKA_URL = "hostname1:port,hostname2:port,hostname3:port"
+  val ZOOKEEPER_URL = "k8sn125:2181,k8sm126:2181,k8sm134:2181"
+  val KAFKA_URL = "k8sn125:9092,k8sm126:9092,k8sm134:9092"
   val columnFamily = "info"
-  val tableName = TableName.valueOf("Flink2HBase")
+  val tableName: TableName = TableName.valueOf("Flink2HBase")
 
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
@@ -33,7 +32,7 @@ object Flink2hbase {
     val props = new Properties()
     props.setProperty("zookeeper.connect", ZOOKEEPER_URL)
     props.setProperty("bootstrap.servers", KAFKA_URL)
-    props.setProperty("grou.idp", "flink-kafka")
+    props.setProperty("group.id", "flink-kafka")
     val transction = env.addSource(
       new FlinkKafkaConsumer010[String]("test", new SimpleStringSchema, props))
     transction.rebalance.map { value =>
@@ -52,9 +51,7 @@ object Flink2hbase {
     val connection = ConnectionFactory.createConnection(hbaseconf)
     val admin = connection.getAdmin
 
-    if (!admin.tableExists(tableName)) {
-      admin.createTable(new HTableDescriptor(tableName).addFamily(new HColumnDescriptor(columnFamily)))
-    }
+    if (!admin.tableExists(tableName)) admin.createTable(new HTableDescriptor(tableName).addFamily(new HColumnDescriptor(columnFamily)))
     val table = connection.getTable(tableName)
     val df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     val put = new Put(Bytes.toBytes(df.format(new Date())))

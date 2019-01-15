@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>flink-learn-scala</groupId>
-    <artifactId>flink-learn-scala</artifactId>
+    <groupId>flink-learn</groupId>
+    <artifactId>flink-learn</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!--properties,变量定义，在dependency引用-->

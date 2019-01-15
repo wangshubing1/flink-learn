@@ -1,13 +1,12 @@
-package com.learn.Flink
+package com.king.learn.Flink.streaming.windowing
 
 import org.apache.flink.api.java.utils.ParameterTool
 import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.api.windowing.time.Time
 
-
 /**
   * @Author: king
-  * @Datetime: 2018/10/16 
+  * @Datetime: 2018/10/16
   * @Desc: TODO
   *
   */

@@ -1,4 +1,4 @@
-package com.learn.Flink
+package com.king.learn.Flink
 
 //#Scala Api中经常会在编译期出现类型的检查异常,还需要导入
 import org.apache.flink.api.scala._

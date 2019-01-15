@@ -1,4 +1,4 @@
-package com.learn.Flink.demo;
+package com.king.learn.Flink.demo;
 
 
 import org.apache.flink.api.common.functions.FoldFunction;

@@ -1,4 +1,4 @@
-package com.learn.Flink.tableSQL
+package com.king.learn.Flink.tableSQL
 
 import org.apache.flink.api.scala._
 import org.apache.flink.table.api.TableEnvironment

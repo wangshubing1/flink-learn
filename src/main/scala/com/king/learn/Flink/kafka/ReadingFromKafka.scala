@@ -1,4 +1,4 @@
-package com.learn.Flink.kafka
+package com.king.learn.Flink.kafka
 
 import java.util.Properties
 

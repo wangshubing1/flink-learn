@@ -1,4 +1,4 @@
-package com.learn.Flink.kafka
+package com.king.learn.Flink.kafka
 
 import org.apache.flink.api.common.restartstrategy.RestartStrategies
 import org.apache.flink.api.common.serialization.SimpleStringSchema

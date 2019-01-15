@@ -1,4 +1,4 @@
-package com.learn.Flink
+package com.king.learn.Flink
 
 import org.apache.flink.api.scala._
 import org.apache.hadoop.io.{IntWritable, Text}

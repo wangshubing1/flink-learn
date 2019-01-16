@@ -39,9 +39,7 @@ object WordCount {
       .flatMap(_.toLowerCase.split("\\W+"))
       .filter(_.nonEmpty)
       .map((_, 1))
-      // group by the tuple field "0" and sum up tuple field "1"
-      .keyBy(0)
-      .sum(1)
+
 
     // emit result
     if (params.has("output")) {
